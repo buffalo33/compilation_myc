@@ -1,8 +1,8 @@
 Projet de construction d'un compilateur de langage pseudo-C.
 ==============================================================
 
-Contexte :
-----------
+Contexte
+--------
 Bonjour, vous vous trouvez dans ce dépôt du projet de compilation de Préaut Clément et Gauchet Augustin. Ce projet utilise Lex et YACC. Il permet de compiler (traduire) plusieurs un langage pseudo-C en langage trois adresse, en C. Ce langague compilé est donc lui m-ême compilable par la suite avec gcc.
 
 Fonctionnalités du compilateur :
@@ -14,8 +14,8 @@ Ce compilateur est capable de compiler un langage possédant les aspects suivant
 5. un mécanisme de typage simple comprenant notamment des entiers int et des pointeurs int *.
 
 
-Instructions :
---------------
+Instructions
+------------
 
 `make` : Compile le projet
 
@@ -24,19 +24,20 @@ Instructions :
 Arguments à tester : test et test_simple. Ces fichier sont dans le répertoire tests
 Pour compiler notre compilateur, entrez la commande "make" dans votre terminal.
 
-Notes :
+Notes
+-----
 
 Les variables déclarées dans les blocs sont bien des variables locales au bloc, grâce à l'utilisation de frame pointers dans une pile de symbole, dont on définit le comportement dans Table_des_symboles.c.
 
 En ce qui concerne les blocs conditionnels, nous souhaitons obtenir les résultats de compilations suivants:
 
-if r inst -> if !r goto beg_else;
+`if r inst -> if !r goto beg_else;
 	     inst;
-	     beg_else:
+	     beg_else:`
 
-if r inst1 else inst2 -> if !r goto beg_else;
+`if r inst1 else inst2 -> if !r goto beg_else;
      	   	      	 inst1;
 			 goto end_if;
 			 beg_else:
 			 inst2;
-			 end_if:
+			 end_if:`
