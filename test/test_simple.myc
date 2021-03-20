@@ -1,0 +1,8 @@
+int main(){
+    int n, m;
+    n = 1;
+    m = (n && 1 + 2) * 3;
+    m = n;
+    n = m == n;
+    return();
+}

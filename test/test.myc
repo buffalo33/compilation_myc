@@ -1,0 +1,26 @@
+int main(){
+  int* s, p;
+  int n;
+  n = 1;
+
+  while (n < 0){
+    while (n > 0){
+      n = 0;
+    };
+  };
+
+  if (n){
+    if (1){
+      int s;
+      s = 0;
+    };
+  }
+  else{
+    int s;
+    s = 18;
+  };
+  
+  s = s + 1;
+  return();
+}
+
